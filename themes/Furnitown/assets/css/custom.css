@@ -6,7 +6,24 @@
     font-family: 'Raleway Black';
     color : #003A96; 
 }
+/* correct the padding of wrapper */
 
+#content-wraper {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*Override Hover color on menu */
+
+.wb-menu-vertical ul li.level-1:hover > a, .view_more a:hover, .wb-menu-vertical ul li.level-2:hover > a, .wb-menu-vertical ul li.level-3:hover > a {
+color: white;
+}
+
+/* fix the padding of the slider */
+
+div.slider-banner {
+padding: 0 15px;
+}
 
 
 .container {
@@ -14,9 +31,7 @@ padding-left: 0;
 padding-right: 0;
 }
 
-p {
-color : white; 
-}
+
 
 .wb-menu-vertical li.level-1 > a span, .view_more span {
     /* display:none; */
@@ -33,7 +48,10 @@ color : white;
     background-color: #003A96;
 }
 
-.sub-head{color: #FFAA00 ;}
+.sub-head{
+color: #F2CC0F;
+background-color: #003A96;
+ }
 
 .sub-head.wbIcon img {
     display : none;
@@ -472,9 +490,18 @@ color: #AA6427;
 
 .wb-menu-vertical ul li.level-3:hover > a{color:#ffffff;}
 .wb-menu-vertical ul li.level-4:hover > a{color:#ffffff;}
-.wb-menu-vertical ul li.level-2 > a{color:#003A96;}
-.wb-menu-vertical ul li.level-3 > a{color:#003A96;}
-.wb-menu-vertical ul li.level-4 > a{color:#003A96;}
+.wb-menu-vertical ul li.level-2 > a{ 
+    color: #013996;
+    font-weight: 400;
+    }
+.wb-menu-vertical ul li.level-3 > a{
+    color: #013996;
+    font-weight: 300;}
+    
+.wb-menu-vertical ul li.level-4 > a{
+    color: #808BAB;
+    font-weight: 300;}
+
 
 #_desktop_top_menu.active .menu-vertical {
     height: fit-content;
@@ -710,7 +737,7 @@ main{
 	background-color: #fff;
 }
 a{
-    color: #000000;
+    color: #003A96;
     text-decoration: none;
     transition: 0.3s ease;
     /* font-family: 'Raleway Regular'; */
@@ -1009,7 +1036,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: capitalize;
     cursor: pointer;
     font-weight: 500;
-    color: #fff;
+    color: #003A96;
 }
 .right-nav .dropdown-menu a{
     color: #222;
@@ -1062,6 +1089,7 @@ body::-webkit-scrollbar-thumb {
 }
 .headerparttop {
     padding: 23px 0;
+    background-color: #003A96;
 }
 .headerpo{
     position: relative;
@@ -1069,7 +1097,7 @@ body::-webkit-scrollbar-thumb {
 .topmenu {
     border-top: 1px solid #e5e5e5;
     padding: 15px 0;
-    background-color: #F2CB05;
+    background: linear-gradient(180deg, #f3e600 0%, #f7a813 67%);
 }
 .wishl {
     margin: 11px 40px;
@@ -1077,15 +1105,15 @@ body::-webkit-scrollbar-thumb {
 /* static menu */
 .statmenu li{
     display: inline-block;
-    margin: 3px 20px;
+    margin: 3px 10px;
 }
 .statmenu a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: capitalize;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
-    text-align: center;
+    text-align: right;
     display: inline-block;
 }
 .statmenu a:hover{
@@ -3442,6 +3470,13 @@ right:0;
 #_desktop_top_menu ul, #_desktop_top_menu ul li{
   background-color: #EFEFEF;
 }
+#_desktop_top_menu ul, #_desktop_top_menu ul li.level-4 {
+  background-color: #FFFFFF;
+}
+
+#_desktop_top_menu ul {
+background-color: #003993;
+}
 
 
 
@@ -3506,7 +3541,7 @@ height: 100%;
     content: "\f105";
 }
 
-/* filtre Ã  facette */
+/* filtre à facette */
 #search_filters .facet .collapse.faceted-slider {
     overflow-y: unset;
 }
@@ -3514,7 +3549,7 @@ height: 100%;
 
 @media (min-width: 768px) {
     .wbCart {
-        margin-left: 10px;
+        margin-left: 2px;
     }
     .wbCart:hover {
         background: #003A96 !important;
@@ -3546,7 +3581,7 @@ height: 100%;
     }
 }
 
-/*---- Ajout Manuel car dÃ©sactivation du module WB Theme Customizer */
+/*---- Ajout Manuel car désactivation du module WB Theme Customizer */
 .header-top {
    position : unset !important ;
 }
@@ -3616,9 +3651,174 @@ height: 100%;
   }
 }
 .menu-vertical a span {
-  font-size: calc(8px + 0.5vw); /* Adjusts the size based on the viewport width */
+  font-size: calc(7px + 0.3vw); /* Adjusts the size based on the viewport width */
 }
+ .wb-menu-vertical li.level-1 > a span {
+    font-weight: 700;
+    color: #0f4499
+}
+.wb-menu-vertical li.level-1:hover > a span {
+color: white;
+}
+
 
 .menu-vertical a img {
   height: calc(40px + 1vh); /* Adjusts the height based on the viewport height */
 }
+
+/*CSS for customize the new category module*/
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category {
+  flex: 0 1 calc(33.14% - 10px); /* Three items per row, accounting for the gap */
+  color: white;
+  position: relative;
+  height: 500px; /* Set a fixed height or change as per your design */
+  border-radius: 10px; /* Optional rounded corners */
+  overflow: hidden; /* Keeps the content within the border radius */
+ 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.category-icon {
+  /*width: 50%; Adjust icon size as needed */
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category-text {
+  margin-top: 10px;
+  font-size: 1em; /* Adjust text size as needed */
+}
+
+
+
+.category.safety {
+  background:  linear-gradient(0deg, rgba(1, 108, 176, 0.5), rgba(1, 108, 176, 0.5)), url('/img/cms/Categories-static-block/Sign.jpg') ;
+      background-size: cover;
+    background-position: center;
+   flex-grow: 2;
+  }
+
+  .category.construction {
+    background:  linear-gradient(0deg, rgba(171, 101, 39, 0.5), rgba(171, 101, 39, 0.5)), url('/img/cms/Categories-static-block/Worker.jpg') ;
+      background-size: cover;
+    background-position: center;
+
+  }
+
+  
+
+  .category.heavy {
+    background:  linear-gradient(0deg, rgba(233, 93, 12, 0.5), rgba(233, 93, 12, 0.5)), url('/img/cms/Categories-static-block/Engine.jpg') ;
+      background-size: cover;
+    background-position: center;
+  }
+
+  .category.industry {
+    
+    background:  linear-gradient(0deg, rgba(6, 108, 154, 0.5), rgba(6, 108, 154, 0.5)), url('/img/cms/Categories-static-block/Sparks.jpg') ;
+    background-size: cover;
+  background-position: center;
+  }
+
+  .category.support {
+   
+    background:  linear-gradient(0deg, rgba(225, 14, 41, 0.5), rgba(225, 14, 41, 0.5)), url('/img/cms/Categories-static-block/Hook.jpg') ;
+    background-size: cover;
+  background-position: center;
+  }
+
+  .category.green {
+    background:  linear-gradient(0deg, rgba(105, 167, 96, 0.5), rgba(105, 167, 96, 0.5)), url('/img/cms/Categories-static-block/chainsaw.jpg') ;
+    background-size: cover;
+  background-position: center;
+    flex-grow: 2;
+  }
+  
+
+  
+  .category.tools {
+    
+    background:  linear-gradient(0deg, rgba(12, 134, 89, 0.5), rgba(12, 134, 89, 0.5)), url('/img/cms/Categories-static-block/Driller.jpg') ;
+    background-size: cover;
+  background-position: center;
+   
+  }
+
+  .category.fix {
+    
+    background:  linear-gradient(0deg, rgba(0, 74, 144, 0.5), rgba(0, 74, 144, 0.5)), url('/img/cms/Categories-static-block/Bolt and nuts.jpg') ;
+    background-size: cover;
+  background-position: center;
+  }
+
+  .category.access {
+    
+    
+    background:  linear-gradient(0deg, rgba(0, 74, 144, 0.5), rgba(0, 74, 144, 0.5)), url('/img/cms/Categories-static-block/Ladder.jpg') ;
+    background-size: cover;
+  background-position: center;
+  }
+
+ 
+  
+  
+  div.safety .category-icon {
+    
+    background-image: url('/img/cms/pictogrammes/SAFETY.svg');
+  }
+  
+  div.construction .category-icon {
+    background-image: url('/img/cms/pictogrammes/CONSTRUCTION.svg');
+  }
+
+  div.heavy .category-icon {
+    background-image: url('/img/cms/pictogrammes/HEAVY.svg');
+  }
+
+  div.industry .category-icon {
+    background-image: url('/img/cms/pictogrammes/INDUSTRY.svg');
+  }
+
+  div.support .category-icon {
+    background-image: url('/img/cms/pictogrammes/SUPPORT.svg');
+  }
+
+  div.green .category-icon {
+    background-image: url('/img/cms/pictogrammes/GREEN.svg');
+  }
+
+  div.tools .category-icon {
+    background-image: url('/img/cms/pictogrammes/TOOLS.svg');
+  }
+
+  div.fix .category-icon {
+    background-image: url('/img/cms/pictogrammes/FIX.svg');
+  }
+
+  div.access .category-icon {
+    background-image: url('/img/cms/pictogrammes/ACCESS.svg');
+  }
+  
+  /*Customize Account Button*/
+  
+  div.user-info {
+  background: linear-gradient(180deg, #f3e600 0%, #f7a813 67%);
+  padding: 10px;
+  border-radius: 50px;
+  }
+
