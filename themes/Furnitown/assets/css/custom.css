@@ -369,6 +369,7 @@ color: #003A96;
 .menu-dropdown.cat-drop-menu, .wb-menu-vertical .menu-dropdown{
 
     left: 215px;
+    height: fit-content;
 }
 
 .wb-menu-vertical li.level-1{
