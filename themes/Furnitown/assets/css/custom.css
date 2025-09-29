@@ -2017,7 +2017,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 100%;
 }
 .social {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
     z-index: 1;
     background-color: #f5f5f5;
