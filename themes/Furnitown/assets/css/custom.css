@@ -1969,7 +1969,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 15px;
 }
 #footer_contact .icon svg {
-    fill: #FFAA00;
+    fill: white;
     margin-right: 8px;
     float: left;
     width: 25px;
