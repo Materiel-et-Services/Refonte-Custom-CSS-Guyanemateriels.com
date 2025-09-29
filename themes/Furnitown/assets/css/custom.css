@@ -1998,11 +1998,11 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     font-size: 14px;
     line-height: 30px;
-    color: #F2CB05;
+    color: white;
     word-break: break-all;
 }
 .footer-container li a:hover, #footer .lnk_wishlist:hover,.foot-payment i:hover{
-    color: #003A96   ;
+    color: #F2CB05   ;
 }
 .block-social .social li {
     display: inline-block;
