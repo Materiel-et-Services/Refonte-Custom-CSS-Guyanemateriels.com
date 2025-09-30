@@ -4008,3 +4008,41 @@ color: white;
 /* 9) Nettoyage : retirer l’ancien fond gris et le hover arrondi d’origine */
 #wrapper #wb_category_feature .catbo { background-color: transparent; }
 #wrapper #wb_category_feature .cat-img:hover .catbo { border-radius: 12px; }
+
+ /* WB Category Feature : une seule ligne qui défile */
+#wb_cat_carousel.owl-carousel { display: block !important; }
+#wb_cat_carousel .owl-stage-outer { overflow: hidden; }
+
+/* Empêche tout retour à la ligne à l'intérieur de la scène */
+#wb_cat_carousel .owl-stage {
+  white-space: nowrap;
+}
+
+/* Chaque item reste sur la même ligne (pas de float) */
+#wb_cat_carousel .owl-item {
+  float: none !important;
+  display: inline-block !important;
+  vertical-align: top;
+  /* 8 items visibles en desktop */
+  width: 12.5% !important;
+}
+
+/* Ajustez la hauteur des tuiles si besoin */
+#wb_cat_carousel .catbo { height: 200px; }
+
+/* Responsive (exemple) : 4 en tablette, 2 en mobile */
+@media (max-width: 1199px) { #wb_cat_carousel .owl-item { width: 25% !important; } }
+@media (max-width: 767px)  { #wb_cat_carousel .owl-item { width: 50% !important; } }
+
+/* WB Category Feature : gestion du texte */
+#wb_cat_carousel .cate-img {
+  font-size: 0.9rem;        /* taille réduite */
+  line-height: 1.2;         /* interligne compact */
+  white-space: normal;      /* permet de revenir à la ligne */
+  word-wrap: break-word;    /* coupe les mots trop longs */
+  overflow: hidden;         /* masque le surplus */
+  text-overflow: ellipsis;  /* ajoute ... si ça dépasse */
+  max-height: 3.6em;        /* ~2 lignes de texte visibles */
+  margin-top: 8px;
+  padding: 0 6px;
+}
