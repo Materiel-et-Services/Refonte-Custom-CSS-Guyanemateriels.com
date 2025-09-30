@@ -4408,3 +4408,10 @@ color: white;
   padding: 0 8px;               /* bordure visuelle G/D sans couper la carte */
   box-sizing: content-box;      /* laisse Owl gérer la largeur, on n’influence pas le calcul */
 }
+
+
+@media (min-width: 992px) {
+  .menu-dropdown.cat-drop-menu, .wb-menu-vertical .menu-dropdown {
+    height: 100vh;
+  }
+}
