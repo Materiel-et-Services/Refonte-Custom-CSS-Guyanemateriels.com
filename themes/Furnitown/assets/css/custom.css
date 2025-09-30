@@ -4246,3 +4246,81 @@ color: white;
 /* ===========================
    #gpt- Fin des overrides WB Category Feature
    =========================== */
+
+     
+   /* ===========================
+   #gpt- FIX cartes minuscules + rondes
+   =========================== */
+
+/* #gpt- Donne une largeur lisible à chaque item (sans casser Owl).
+   On fixe une largeur mini qui gardera des cartes visibles et carrées. */
+#wb_cat_carousel .owl-item {
+  width: auto !important;        /* on laisse Owl calculer */
+  float: left !important;        /* valeurs par défaut Owl */
+  display: block !important;
+  box-sizing: border-box;        /* sécurité */
+  min-width: 236px;              /* #gpt- 220px carte + 8px padding G/D (voir plus bas) */
+}
+
+/* #gpt- Espace visuel sans toucher à la largeur de l'item */
+#wb_cat_carousel .owl-item .cat-img {
+  padding: 0 8px;                /* écart horizontal entre cartes */
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+/* #gpt- Force la carte en “vrai carré” (et taille normale) */
+#wb_cat_carousel .catbo {
+  width: 220px !important;       /* #gpt- taille carte (augmente/diminue à ton goût) */
+  height: 220px !important;      /* carré */
+  border-radius: 16px !important;/* coins carrés arrondis (pas ronds) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* #gpt- Annule le cercle au survol imposé par le thème */
+#wb_category_feature .cat-img:hover .catbo {
+  border-radius: 16px !important;
+}
+
+/* #gpt- Option lisibilité : petit dégradé */
+#wb_cat_carousel .catbo::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.05));
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* #gpt- Titre : remonté et limité à 2 lignes (évite débordements) */
+#wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img {
+  position: absolute;
+  left: 16px; right: 16px; bottom: 18px;
+  z-index: 2; margin: 0; padding: 0; text-align: left;
+  color: #fff; font-weight: 700; font-size: .95rem; line-height: 1.25;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+  pointer-events: none;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; white-space: normal; word-wrap: break-word;
+}
+
+/* #gpt- Responsive : garde des cartes lisibles sans tout écraser */
+@media (max-width: 1199px){
+  #wb_cat_carousel .owl-item { min-width: 210px; }  /* un poil plus compact */
+  #wb_cat_carousel .catbo { width: 200px !important; height: 200px !important; }
+  #wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img { bottom: 14px; font-size: .92rem; }
+}
+@media (max-width: 767px){
+  #wb_cat_carousel .owl-item { min-width: 180px; }
+  #wb_cat_carousel .catbo { width: 170px !important; height: 170px !important; }
+  #wb_cat_carousel .owl-item .cat-img { padding: 0 6px; }
+  #wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img { bottom: 12px; font-size: .9rem; }
+}
