@@ -3964,3 +3964,23 @@ color: white;
     linear-gradient(0deg, rgba(1,108,176,.50), rgba(1,108,176,.50)),
     url('/img/cms/Categories-static-block/Sign.jpg');
 }
+
+/* MS GREEN (cat id 8) */
+#wrapper #wb_category_feature a[href*="/8-ms-green-"],
+#wrapper #wb_category_feature a[title*="MS GREEN"] {}
+#wrapper #wb_category_feature a[href*="/8-ms-green-"] .catbo,
+#wrapper #wb_category_feature a[title*="MS GREEN"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(105,167,96,.50), rgba(105,167,96,.50)),
+    url('/img/cms/Categories-static-block/chainsaw.jpg');
+}
+
+/* MS HEAVY (cat id 9) */
+#wrapper #wb_category_feature a[href*="/9-ms-heavy-"],
+#wrapper #wb_category_feature a[title*="MS HEAVY"] {}
+#wrapper #wb_category_feature a[href*="/9-ms-heavy-"] .catbo,
+#wrapper #wb_category_feature a[title*="MS HEAVY"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(234,91,13,.50), rgba(234,91,13,.50)),
+    url('/img/cms/Categories-static-block/Engine.jpg');
+}
