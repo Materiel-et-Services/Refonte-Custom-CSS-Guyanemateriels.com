@@ -4129,3 +4129,120 @@ color: white;
 @media (max-width: 767px){
   #wrapper #wb_category_feature .cate-img { bottom: 12px; font-size: .9rem; }
 }
+
+
+
+
+
+/* ===========================
+   #gpt- WB Category Feature – corrections & optimisations
+   Objectif :
+   - #gpt- garder 8 cartes sur une seule ligne (défilement horizontal intact)
+   - #gpt- éviter que la dernière carte soit rognée (ne plus forcer des largeurs fixes)
+   - #gpt- conserver la forme des cartes (carrées) et la lisibilité du texte
+   - #gpt- créer un espacement visuel sans casser le calcul d'Owl
+   =========================== */
+
+/* #gpt- Laisse Owl Carousel gérer la largeur et la position des items.
+   (Annule d'éventuelles anciennes règles comme width:12.5% !important etc.) */
+#wb_cat_carousel .owl-item{
+  width: auto !important;        /* #gpt- évite les coupes de la dernière carte */
+  float: left !important;        /* #gpt- valeur par défaut Owl */
+  display: block !important;     /* #gpt- valeur par défaut Owl */
+  margin: 0 !important;          /* #gpt- les gaps CSS externes cassent le calcul Owl */
+  padding: 0 !important;
+}
+
+/* #gpt- Ajoute un espace visuel entre les cartes SANS modifier la largeur des items.
+   On applique un padding INTERNE au conteneur visuel de la carte. */
+#wb_cat_carousel .owl-item .cat-img{
+  box-sizing: border-box;        /* #gpt- le padding ne modifie pas la largeur calculée */
+  padding: 0 10px;               /* #gpt- espace horizontal entre cartes */
+  position: relative;
+  text-align: center;
+}
+
+/* #gpt- Cartes carrées (robuste et responsive) */
+#wb_cat_carousel .catbo{
+  width: 100%;
+  height: auto;                  /* #gpt- la hauteur est pilotée par aspect-ratio */
+  aspect-ratio: 1 / 1;           /* #gpt- carré parfait */
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* #gpt- Effet hover discret (optionnel) */
+#wb_cat_carousel .cat-img:hover .catbo{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+/* #gpt- Améliore le contraste du titre sur l'image (overlay léger) */
+#wb_cat_carousel .catbo::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.05));
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* #gpt- On n'utilise que le background-image pour l'illustration, pas l'<img> interne */
+#wb_cat_carousel .catbo img{
+  display: none !important;
+}
+
+/* #gpt- Titre : remonter légèrement, 2 lignes max, pas de débordement.
+   Spécificité renforcée pour prendre le pas sur la règle thème existante. */
+#wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img{
+  position: absolute;
+  left: 16px; right: 16px; bottom: 18px;  /* #gpt- remonte le titre */
+  z-index: 2;
+  margin: 0; padding: 0;
+  text-align: left;
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  line-height: 1.25;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+  pointer-events: none;
+
+  /* #gpt- clamp : 2 lignes visibles maximum */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* #gpt- Responsive : ajuste légèrement les espacements/tailles */
+@media (max-width: 1199px){
+  #wb_cat_carousel .owl-item .cat-img{ padding: 0 9px; }      /* #gpt- gap un peu réduit */
+  #wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img{
+    bottom: 14px; font-size: .92rem;
+  }
+}
+@media (max-width: 767px){
+  #wb_cat_carousel .owl-item .cat-img{ padding: 0 8px; }
+  #wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img{
+    bottom: 12px; font-size: .9rem;
+  }
+}
+
+/* #gpt- Sécurité : si une ancienne règle forçait une hauteur fixe, on l'annule.
+   La forme est désormais assurée par aspect-ratio. */
+#wb_cat_carousel .catbo,
+#wrapper #wb_category_feature .catbo{
+  height: auto !important;       /* #gpt- priorité à aspect-ratio pour la hauteur */
+}
+
+/* #gpt- (Option) Si vous souhaitez des coins moins arrondis, décommentez : */
+/* #wb_cat_carousel .catbo{ border-radius: 12px; } */
+
+/* ===========================
+   #gpt- Fin des overrides WB Category Feature
+   =========================== */
