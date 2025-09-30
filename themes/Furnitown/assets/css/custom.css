@@ -4324,3 +4324,87 @@ color: white;
   #wb_cat_carousel .owl-item .cat-img { padding: 0 6px; }
   #wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img { bottom: 12px; font-size: .9rem; }
 }
+
+
+/* ===========================
+   #gpt- FIX "dernier carré à la ligne"
+   =========================== */
+
+/* #gpt- On transforme la piste en flex non-wrap : impossible de passer à la ligne */
+#wb_cat_carousel .owl-stage {
+  display: flex !important;       /* au lieu de float/inline-block */
+  flex-wrap: nowrap !important;   /* tout reste sur UNE seule ligne */
+  align-items: stretch;
+}
+
+/* #gpt- Chaque item est une “brique” non extensible dans la rangée */
+#wb_cat_carousel .owl-item {
+  float: none !important;         /* on neutralise les floats */
+  display: block !important;
+  flex: 0 0 auto !important;      /* largeur = contenu / styles inline Owl */
+  min-width: unset !important;    /* supprime toute min-width ajoutée précédemment */
+  margin: 0 !important;           /* pas de marge externe (sinon ça casse les calculs) */
+  padding: 0 !important;          /* le gap se gère DEDANS .cat-img */
+  box-sizing: border-box;
+}
+
+/* #gpt- Espace visuel entre cartes (sans affecter la largeur de l’item) */
+#wb_cat_carousel .owl-item .cat-img {
+  padding: 0 8px;                 /* ajuste le gap ici */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* #gpt- Cartes carrées à taille fixe (à adapter si besoin) */
+#wb_cat_carousel .catbo {
+  width: 220px !important;
+  height: 220px !important;       /* carré */
+  border-radius: 16px !important; /* coins arrondis, pas ronds */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* #gpt- Empêche le thème de transformer les cartes en cercle au hover */
+#wb_category_feature .cat-img:hover .catbo {
+  border-radius: 16px !important;
+}
+
+/* #gpt- Titre lisible, remonté, 2 lignes max */
+#wrapper #wb_category_feature #wb_cat_carousel .cat-img .cate-img {
+  position: absolute; left: 16px; right: 16px; bottom: 18px;
+  z-index: 2; margin: 0; padding: 0; text-align: left;
+  color: #fff; font-weight: 700; font-size: .95rem; line-height: 1.25;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35); pointer-events: none;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow: hidden; white-space: normal; word-wrap: break-word;
+}
+
+/* #gpt- Responsive : réduit légèrement la carte pour éviter les squeeze */
+@media (max-width: 1199px){
+  #wb_cat_carousel .catbo { width: 200px !important; height: 200px !important; }
+}
+@media (max-width: 767px){
+  #wb_cat_carousel .catbo { width: 170px !important; height: 170px !important; }
+  #wb_cat_carousel .owl-item .cat-img { padding: 0 6px; }
+}
+/* ===========================
+   #gpt- FIX rognage du dernier item (BL ACCESS)
+   =========================== */
+
+/* #gpt- On garde le gap horizontal standard */
+#wb_cat_carousel .owl-item .cat-img {
+  padding: 0 8px;               /* gap visuel entre cartes */
+  box-sizing: border-box;
+}
+
+/* #gpt- Mais on annule le padding côté bordures pour éviter la coupe par overflow:hidden */
+#wb_cat_carousel .owl-item:first-child .cat-img { padding-left: 0; }   /* pas de marge à gauche du 1er */
+#wb_cat_carousel .owl-item:last-child  .cat-img { padding-right: 0; }  /* pas de marge à droite du dernier */
+
+/* #gpt- On “réintroduit” un petit espace interne au niveau de la piste pour respirer,
+   sans rogner la dernière carte */
+#wb_cat_carousel .owl-stage {
+  padding: 0 8px;               /* bordure visuelle G/D sans couper la carte */
+  box-sizing: content-box;      /* laisse Owl gérer la largeur, on n’influence pas le calcul */
+}
