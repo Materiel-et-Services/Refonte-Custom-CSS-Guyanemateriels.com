@@ -3905,3 +3905,17 @@ color: white;
   z-index: 1;
   border-radius: inherit;
 }
+
+/* 5) largeur des items Owl (un peu plus large, 2–5 par vue selon viewport) */
+#wb_cat_carousel .owl-item { width: 260px !important; }   /* ajustez selon maquette */
+
+/* 6) responsive */
+@media (max-width: 1199px) {
+  #wb_cat_carousel .owl-item { width: 220px !important; }
+  #wrapper #wb_category_feature .catbo { height: 200px; }
+}
+@media (max-width: 767px) {
+  #wb_cat_carousel .owl-item { width: 75% !important; }   /* 1 par écran en mobile */
+  #wrapper #wb_category_feature .catbo { height: 180px; }
+  #wrapper #wb_category_feature .cate-img { font-size: .95rem; }
+}
