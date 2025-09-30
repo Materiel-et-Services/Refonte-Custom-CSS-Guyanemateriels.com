@@ -3919,3 +3919,28 @@ color: white;
   #wrapper #wb_category_feature .catbo { height: 180px; }
   #wrapper #wb_category_feature .cate-img { font-size: .95rem; }
 }
+
+/* === 7) Mapping “image + couleur de gradient” par catégorie via l’URL === */
+/* Placez vos visuels dans /img/cms/Categories-static-block/... (déjà votre pratique) */
+
+/* MS TOOLS (cat id 4) */
+#wrapper #wb_category_feature a[href*="/4-ms-tools-"],
+#wrapper #wb_category_feature a[title*="MS TOOLS"] {
+  /* gradient + background */
+}
+#wrapper #wb_category_feature a[href*="/4-ms-tools-"] .catbo,
+#wrapper #wb_category_feature a[title*="MS TOOLS"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(12,134,89,.50), rgba(12,134,89,.50)),
+    url('/img/cms/Categories-static-block/Driller.jpg');
+}
+
+/* MS CONSTRUCTION (cat id 5) */
+#wrapper #wb_category_feature a[href*="/5-ms-construction-"],
+#wrapper #wb_category_feature a[title*="MS CONSTRUCTION"] {}
+#wrapper #wb_category_feature a[href*="/5-ms-construction-"] .catbo,
+#wrapper #wb_category_feature a[title*="MS CONSTRUCTION"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(170,100,39,.50), rgba(170,100,39,.50)),
+    url('/img/cms/Categories-static-block/Worker.jpg');
+}
