@@ -3944,3 +3944,23 @@ color: white;
     linear-gradient(0deg, rgba(170,100,39,.50), rgba(170,100,39,.50)),
     url('/img/cms/Categories-static-block/Worker.jpg');
 }
+
+/* MS INDUSTRY (cat id 6) */
+#wrapper #wb_category_feature a[href*="/6-ms-industry-"],
+#wrapper #wb_category_feature a[title*="MS INDUSTRY"] {}
+#wrapper #wb_category_feature a[href*="/6-ms-industry-"] .catbo,
+#wrapper #wb_category_feature a[title*="MS INDUSTRY"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(6,108,154,.50), rgba(6,108,154,.50)),
+    url('/img/cms/Categories-static-block/Sparks.jpg');
+}
+
+/* MS SAFETY (cat id 7) */
+#wrapper #wb_category_feature a[href*="/7-ms-safety-"],
+#wrapper #wb_category_feature a[title*="MS SAFETY"] {}
+#wrapper #wb_category_feature a[href*="/7-ms-safety-"] .catbo,
+#wrapper #wb_category_feature a[title*="MS SAFETY"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(1,108,176,.50), rgba(1,108,176,.50)),
+    url('/img/cms/Categories-static-block/Sign.jpg');
+}
