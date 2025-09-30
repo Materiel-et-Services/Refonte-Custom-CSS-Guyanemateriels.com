@@ -4046,3 +4046,86 @@ color: white;
   margin-top: 8px;
   padding: 0 6px;
 }
+
+/*AJOUT A FAIRE  */
+
+/* Rétablir 8 items plein pot sans débordement */
+#wb_cat_carousel .owl-item {
+  width: 12.5% !important;   /* 8 = 100 / 8 */
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  display: inline-block !important;
+  vertical-align: top;
+}
+/* Evite le "blanc" entre inline-block */
+#wb_cat_carousel .owl-stage { white-space: nowrap; font-size: 0; }
+#wb_cat_carousel .cate-img { font-size: 0.9rem; }  /* on remet une taille de texte */
+
+/* Hauteur des tuiles */
+#wb_cat_carousel .catbo { height: 220px; }  /* 200 → 220, ajustez à goût */
+
+/* Zone de texte en overlay */
+#wb_cat_carousel .cate-img {
+  position: absolute;
+  left: 12px; 
+  right: 12px; 
+  bottom: 16px;              /* remonte le texte */
+  z-index: 2;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  word-wrap: break-word;
+
+  /* Empêcher le dépassement */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* max 2 lignes */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Laisser Owl calculer la largeur des items */
+#wb_cat_carousel .owl-item {
+  width: auto !important;        /* retire le 12.5% forcé */
+}
+
+/* Cartes parfaitement carrées */
+#wb_cat_carousel .catbo {
+  width: 100%;
+  aspect-ratio: 1 / 1;          /* carré natif */
+  height: auto;                  /* l’aspect-ratio gère la hauteur */
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Titre: 2 lignes max, remonté et lisible */
+#wrapper #wb_category_feature .cate-img {   /* même spécificité que la règle thème */
+  position: absolute;
+  left: 16px; right: 16px; bottom: 18px;    /* remonte le texte */
+  font-size: .95rem; line-height: 1.25;
+  color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.35);
+  margin: 0; padding: 0; text-align: left;
+  display: -webkit-box; -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; overflow: hidden;  /* coupe sur 2 lignes */
+  word-wrap: break-word;
+}
+
+/* (facultatif) petit lift au hover */
+#wb_cat_carousel .cat-img:hover .catbo {
+  transform: translateY(-2px);
+  transition: .2s;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+/* Responsive (exemples) */
+@media (max-width: 1199px){
+  #wrapper #wb_category_feature .cate-img { bottom: 14px; font-size: .92rem; }
+}
+@media (max-width: 767px){
+  #wrapper #wb_category_feature .cate-img { bottom: 12px; font-size: .9rem; }
+}
