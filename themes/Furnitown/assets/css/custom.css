@@ -3984,3 +3984,23 @@ color: white;
     linear-gradient(0deg, rgba(234,91,13,.50), rgba(234,91,13,.50)),
     url('/img/cms/Categories-static-block/Engine.jpg');
 }
+
+/* BL FIX (cat id 10) */
+#wrapper #wb_category_feature a[href*="/10-bl-fix-"],
+#wrapper #wb_category_feature a[title*="BL FIX"] {}
+#wrapper #wb_category_feature a[href*="/10-bl-fix-"] .catbo,
+#wrapper #wb_category_feature a[title*="BL FIX"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(0,74,144,.50), rgba(0,74,144,.50)),
+    url('/img/cms/Categories-static-block/Bolt and nuts.jpg');
+}
+
+/* BL ACCESS (cat id 11) */
+#wrapper #wb_category_feature a[href*="/11-bl-access-"],
+#wrapper #wb_category_feature a[title*="BL ACCESS"] {}
+#wrapper #wb_category_feature a[href*="/11-bl-access-"] .catbo,
+#wrapper #wb_category_feature a[title*="BL ACCESS"] .catbo {
+  background-image:
+    linear-gradient(0deg, rgba(0,74,144,.50), rgba(0,74,144,.50)),
+    url('/img/cms/Categories-static-block/Ladder.jpg');
+}
