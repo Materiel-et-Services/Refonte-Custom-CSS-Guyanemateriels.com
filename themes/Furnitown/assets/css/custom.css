@@ -4004,3 +4004,7 @@ color: white;
     linear-gradient(0deg, rgba(0,74,144,.50), rgba(0,74,144,.50)),
     url('/img/cms/Categories-static-block/Ladder.jpg');
 }
+
+/* 9) Nettoyage : retirer l’ancien fond gris et le hover arrondi d’origine */
+#wrapper #wb_category_feature .catbo { background-color: transparent; }
+#wrapper #wb_category_feature .cat-img:hover .catbo { border-radius: 12px; }
