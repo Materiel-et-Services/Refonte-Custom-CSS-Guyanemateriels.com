@@ -1118,7 +1118,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
 }
 .statmenu a:hover{
-    color: #FFAA00;
+    color: white;
 }
 .statmenu li.headsp{
     margin: 3px 0;
