@@ -1046,7 +1046,7 @@ body::-webkit-scrollbar-thumb {
     color: #FFAA00;
 }
 #_desktop_language_selector button:hover, #_desktop_currency_selector button:hover,#_desktop_user_info .nav-link:hover{
-    color: #FFAA00;
+    color: white;
 }
 .hcom svg,#_desktop_cart svg,.wishl svg{
 	transition: 0.3s ease;
