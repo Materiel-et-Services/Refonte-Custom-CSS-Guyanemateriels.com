@@ -2051,6 +2051,10 @@ body::-webkit-scrollbar-thumb {
     content: "\f09a";
     font-family: fontAwesome;
 }
+.linkedin a::before {
+    content: "\f0e1";
+    font-family: fontAwesome;
+}
 .twitter a::before {
     content: "\f099";
     font-family: fontAwesome;
