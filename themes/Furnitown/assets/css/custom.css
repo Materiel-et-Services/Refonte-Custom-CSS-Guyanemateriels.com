@@ -756,7 +756,7 @@ ul{
     cursor: no-drop !important;
 }
 a:hover,a:focus{
-    color:#003A96;
+    color: orange;
     text-decoration: none;
     outline: none;
 }
@@ -4414,4 +4414,8 @@ color: white;
   .menu-dropdown.cat-drop-menu, .wb-menu-vertical .menu-dropdown {
     height: 100vh;
   }
+}
+
+.open > .dropdown-menu {
+    background-color: #003A96;
 }
