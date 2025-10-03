@@ -4419,3 +4419,7 @@ color: white;
 .open > .dropdown-menu {
     background-color: #003A96;
 }
+
+.open > .dropdown-menu a {
+    color: #FFAA00;
+}
