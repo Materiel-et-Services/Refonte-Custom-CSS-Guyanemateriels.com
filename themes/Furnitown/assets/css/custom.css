@@ -2020,7 +2020,6 @@ body::-webkit-scrollbar-thumb {
     display: inline-flex;
     position: relative;
     z-index: 1;
-    background-color: #f5f5f5;
 }
 .block-social{
     position: relative;
