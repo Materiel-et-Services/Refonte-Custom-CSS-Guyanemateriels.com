@@ -4423,3 +4423,7 @@ color: white;
 .open > .dropdown-menu a {
     color: #FFAA00;
 }
+
+.open > .dropdown-menu a:hover {
+    color: white;
+}
