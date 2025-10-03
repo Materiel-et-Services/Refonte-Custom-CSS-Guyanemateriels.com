@@ -2038,6 +2038,7 @@ body::-webkit-scrollbar-thumb {
 }
 .block-social .social li:hover{
     background-color: #003A96;
+    transform: scale(1.1);
 }
 .foot-copy{
     margin-top: 30px;
