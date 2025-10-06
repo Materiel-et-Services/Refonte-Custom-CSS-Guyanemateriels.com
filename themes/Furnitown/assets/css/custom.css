@@ -4432,3 +4432,7 @@ color: white;
 .open > .dropdown-menu a:hover {
     color: white;
 }
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
