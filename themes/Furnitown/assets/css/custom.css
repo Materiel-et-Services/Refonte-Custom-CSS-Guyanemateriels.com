@@ -3488,7 +3488,6 @@ background: linear-gradient(to bottom, #003993 10%, transparent 10%);
 
 
 .menu-active .fixed{
-height: 100%;
 }
 
 @media(max-width:767px){
