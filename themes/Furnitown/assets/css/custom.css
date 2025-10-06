@@ -2035,7 +2035,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 0;
 }
 .block-social .social li:hover a::before{
-    color: #F2CB05;
+    color: #ffff00;
 }
 .block-social .social li:hover{
     background-color: #003A96;
