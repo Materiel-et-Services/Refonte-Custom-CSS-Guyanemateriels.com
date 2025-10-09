@@ -1051,6 +1051,7 @@ body::-webkit-scrollbar-thumb {
 .hcom svg,#_desktop_cart svg,.wishl svg{
 	transition: 0.3s ease;
 	cursor: pointer;
+    fill: white;
 }
 .wishl:hover svg,#_desktop_cart:hover svg,.hcom:hover svg{
     fill: #FFAA00 ;
