@@ -4435,3 +4435,12 @@ color: white;
 .custom-checkbox input[type="checkbox"] {
     display: none;
 }
+
+
+.cartc {
+    color: white;
+}
+
+.cartc:hover {
+    color: orange;
+}
