@@ -551,3 +551,30 @@ function closeSearch() {
 // }
 // $(document).ready(function(){ wbFilters(); });
 // $(window).resize(function(){ wbFilters(); });
+
+/****Change Links of Nos gammes de produits cards****/
+const myStoresLinks = {
+  "https://guyanemateriels.com/4-ms-tools---electroportatifs-et-accessoires":
+    "https://guyanemateriels.com/content/15-ms-tools-en-construction",
+  "https://guyanemateriels.com/6-ms-industry---materiels-et-equipements-datelier":
+    "https://guyanemateriels.com/content/16-ms-industry-en-construction",
+  "https://guyanemateriels.com/8-ms-green---materiels-despaces-verts":
+    "https://guyanemateriels.com/content/ms-green-en-construction",
+  "https://guyanemateriels.com/5-ms-construction---materiels-et-equipements-de-chantier":
+    "https://guyanemateriels.com/content/18-ms-construction-en-construction",
+  "https://guyanemateriels.com/9-ms-heavy---materiels-lourds-du-btp-mines-et-forets":
+    "https://guyanemateriels.com/content/19-ms-heavu-en-construction",
+  "https://guyanemateriels.com/11-bl-access---moyens-dacces-en-hauter":
+    "https://guyanemateriels.com/content/21-bl-access-en-construction",
+  "https://guyanemateriels.com/10-bl-fix---quincaillerie":
+    "https://guyanemateriels.com/content/bl-fix-en-construction"
+};
+
+// Select all card links
+document.querySelectorAll('.cat-img a[href]').forEach(a => {
+  const url = a.href.split('#')[0].split('?')[0];
+  if (myStoresLinks[url]) {
+    a.href = myStoresLinks[url];
+    a.setAttribute('data-replaced', 'true'); 
+  }
+});
