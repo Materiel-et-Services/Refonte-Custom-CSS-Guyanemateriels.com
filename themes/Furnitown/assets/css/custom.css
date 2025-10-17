@@ -1955,6 +1955,13 @@ body::-webkit-scrollbar-thumb {
     padding: 15px;
 
 }
+
+#owl-logo .owl-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* footer */
 .foot-payment i {
     font-size: 22px;
