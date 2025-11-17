@@ -4024,6 +4024,7 @@ color: white;
  /* WB Category Feature : une seule ligne qui défile */
 #wb_cat_carousel.owl-carousel { display: block !important; }
 #wb_cat_carousel .owl-stage-outer { overflow: hidden; }
+#wb_cat_carousel .owl-stage-outer { width: fit-content;}
 
 /* Empêche tout retour à la ligne à l'intérieur de la scène */
 #wb_cat_carousel .owl-stage {
@@ -4439,6 +4440,11 @@ color: white;
 .open > .dropdown-menu a:hover {
     color: white;
 }
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
 
 .cartc {
     color: white;
