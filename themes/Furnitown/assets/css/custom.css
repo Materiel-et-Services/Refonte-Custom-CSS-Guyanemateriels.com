@@ -3941,7 +3941,7 @@ color: white;
   /* gradient + background */
 }
 #wrapper #wb_category_feature a[href*="/4-ms-tools-"] .catbo,
-#wrapper #wb_category_feature a[title*="MS TOOLS"] .catbo {
+#wrapper #wb_category_feature a[title*="Outillage électroportatif"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(12,134,89,.50), rgba(12,134,89,.50)),
     url('/img/cms/Categories-static-block/Driller.jpg');
@@ -3951,7 +3951,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/5-ms-construction-"],
 #wrapper #wb_category_feature a[title*="MS CONSTRUCTION"] {}
 #wrapper #wb_category_feature a[href*="/5-ms-construction-"] .catbo,
-#wrapper #wb_category_feature a[title*="MS CONSTRUCTION"] .catbo {
+#wrapper #wb_category_feature a[title*="Matériel et outillage de chantier"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(170,100,39,.50), rgba(170,100,39,.50)),
     url('/img/cms/Categories-static-block/Worker.jpg');
@@ -3961,7 +3961,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/6-ms-industry-"],
 #wrapper #wb_category_feature a[title*="MS INDUSTRY"] {}
 #wrapper #wb_category_feature a[href*="/6-ms-industry-"] .catbo,
-#wrapper #wb_category_feature a[title*="MS INDUSTRY"] .catbo {
+#wrapper #wb_category_feature a[title*="Equipement industriel et d'atelier"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(6,108,154,.50), rgba(6,108,154,.50)),
     url('/img/cms/Categories-static-block/Sparks.jpg');
@@ -3971,7 +3971,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/7-ms-safety-"],
 #wrapper #wb_category_feature a[title*="MS SAFETY"] {}
 #wrapper #wb_category_feature a[href*="/7-ms-safety-"] .catbo,
-#wrapper #wb_category_feature a[title*="MS SAFETY"] .catbo {
+#wrapper #wb_category_feature a[title*="EPI, Hygiène et Sécurité"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(1,108,176,.50), rgba(1,108,176,.50)),
     url('/img/cms/Categories-static-block/Sign.jpg');
@@ -3981,7 +3981,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/8-ms-green-"],
 #wrapper #wb_category_feature a[title*="MS GREEN"] {}
 #wrapper #wb_category_feature a[href*="/8-ms-green-"] .catbo,
-#wrapper #wb_category_feature a[title*="MS GREEN"] .catbo {
+#wrapper #wb_category_feature a[title*="Matériel d'espaces verts et jardin"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(105,167,96,.50), rgba(105,167,96,.50)),
     url('/img/cms/Categories-static-block/chainsaw.jpg');
@@ -3991,7 +3991,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/9-ms-heavy-"],
 #wrapper #wb_category_feature a[title*="MS HEAVY"] {}
 #wrapper #wb_category_feature a[href*="/9-ms-heavy-"] .catbo,
-#wrapper #wb_category_feature a[title*="MS HEAVY"] .catbo {
+#wrapper #wb_category_feature a[title*="Engins BTP"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(234,91,13,.50), rgba(234,91,13,.50)),
     url('/img/cms/Categories-static-block/Engine.jpg');
@@ -4001,7 +4001,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/10-bl-fix-"],
 #wrapper #wb_category_feature a[title*="BL FIX"] {}
 #wrapper #wb_category_feature a[href*="/10-bl-fix-"] .catbo,
-#wrapper #wb_category_feature a[title*="BL FIX"] .catbo {
+#wrapper #wb_category_feature a[title*="Fixation - Quincaillerie"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(0,74,144,.50), rgba(0,74,144,.50)),
     url('/img/cms/Categories-static-block/Bolt and nuts.jpg');
@@ -4011,7 +4011,7 @@ color: white;
 #wrapper #wb_category_feature a[href*="/11-bl-access-"],
 #wrapper #wb_category_feature a[title*="BL ACCESS"] {}
 #wrapper #wb_category_feature a[href*="/11-bl-access-"] .catbo,
-#wrapper #wb_category_feature a[title*="BL ACCESS"] .catbo {
+#wrapper #wb_category_feature a[title*="Moyens d'accès en hauteur"] .catbo {
   background-image:
     linear-gradient(0deg, rgba(0,74,144,.50), rgba(0,74,144,.50)),
     url('/img/cms/Categories-static-block/Ladder.jpg');
