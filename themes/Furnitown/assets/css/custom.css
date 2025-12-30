@@ -2715,6 +2715,8 @@ body::-webkit-scrollbar-thumb {
 }
 .wb-product-grid{
     margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .category-cover img{
     border-radius: 4px;
